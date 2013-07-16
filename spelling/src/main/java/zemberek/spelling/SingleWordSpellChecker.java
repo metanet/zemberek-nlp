@@ -7,6 +7,14 @@ import zemberek.core.logging.Log;
 import java.util.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
+
+/**
+ * This class can be used for finding similar words.
+ * It uses a tree representation of a dictionary and for any given word it quickly finds the similar words from it.
+ * Similarity is determined with edit distance.
+ * It also allows near-key-substitution for common typing errors by giving less penalty to letters according to keyboard
+ * layout.
+ */
 public class SingleWordSpellChecker {
 
     private static final AtomicInteger nodeIndexCounter = new AtomicInteger(0);
