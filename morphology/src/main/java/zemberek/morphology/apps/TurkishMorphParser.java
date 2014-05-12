@@ -1,9 +1,8 @@
 package zemberek.morphology.apps;
 
-import com.google.common.base.Charsets;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
-import com.google.common.io.Resources;
+import zemberek.core.io.ResourceUtil;
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.logging.Log;
 import zemberek.morphology.lexicon.RootLexicon;
@@ -25,8 +24,8 @@ import java.util.concurrent.TimeUnit;
  */
 public class TurkishMorphParser extends BaseParser {
 
-    static String DEFAULT_FREQUENT_WORDS_FILE_PATH = "tr/top-20K-words.txt";
-    static int DEFAULT_CACHE_SIZE = 5000;
+    public static String DEFAULT_FREQUENT_WORDS_FILE_PATH = "tr/top-20K-words.txt";
+    public static int DEFAULT_CACHE_SIZE = 5000;
 
     private MorphParser parser;
     private SimpleMorphCache cache;
@@ -50,10 +49,11 @@ public class TurkishMorphParser extends BaseParser {
 
         public TurkishMorphParserBuilder addTextDictResources(String... resources) throws IOException {
             for (String resource : resources) {
-                _lines.addAll(Resources.readLines(Resources.getResource(resource), Charsets.UTF_8));
+                _lines.addAll(ResourceUtil.readAllLines(resource, TurkishMorphParser.class.getClassLoader()));
             }
             return this;
         }
+
 
         public TurkishMorphParserBuilder addDefaultCache() {
             return addCache(DEFAULT_FREQUENT_WORDS_FILE_PATH, DEFAULT_CACHE_SIZE);
@@ -62,7 +62,7 @@ public class TurkishMorphParser extends BaseParser {
         // limit = 0 for all.
         public TurkishMorphParserBuilder addCache(String fileName, int limit) {
             try {
-                List<String> words = Resources.readLines(Resources.getResource(fileName), Charsets.UTF_8);
+                List<String> words = ResourceUtil.readAllLines(fileName, TurkishMorphParser.class.getClassLoader());
                 if (limit > 0)
                     _cacheLines.addAll(words.subList(0, limit));
                 else

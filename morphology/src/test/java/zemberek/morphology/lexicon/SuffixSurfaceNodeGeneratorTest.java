@@ -9,7 +9,6 @@ import zemberek.core.turkish.TurkishAlphabet;
 import zemberek.morphology.lexicon.graph.SuffixData;
 import zemberek.morphology.lexicon.graph.SuffixSurfaceNode;
 
-
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;

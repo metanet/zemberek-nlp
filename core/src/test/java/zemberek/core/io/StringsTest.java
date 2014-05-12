@@ -327,7 +327,7 @@ public class StringsTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void gram0sizeExceptionTest() {
-        separateGrams("123",0);
+        separateGrams("123", 0);
     }
 
 }

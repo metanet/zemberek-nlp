@@ -41,7 +41,7 @@ public class BinaryFloatFileReader {
                 double d = dis.readFloat();
                 lookupCalc.add(d);
             }
-        dis.close();
+            dis.close();
             return lookupCalc.getQuantizer(quantizerType);
         }
     }

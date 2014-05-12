@@ -120,7 +120,7 @@ public final class Log {
     }
 
     public static void trace(Object object) {
-            log(Level.FINER, object.toString());
+        log(Level.FINER, object.toString());
     }
 
     public static void debug(String message, Object... params) {

@@ -110,7 +110,7 @@ public class Z3ModelA extends Z3AbstractDisambiguator implements TurkishMorphDis
         Z3WordParse start = new Z3WordParse(SENTENCE_START_PARSE);
         Z3WordParse end = new Z3WordParse(SENTENCE_END_PARSE);
         for (SentenceData sentenceData : trainingSet) {
-            if(sentenceData.words.size()==0)
+            if (sentenceData.words.size() == 0)
                 continue;
             Z3WordParse first = start;
             Z3WordParse second = new Z3WordParse(sentenceData.words.get(0).correctParse);
@@ -249,7 +249,7 @@ public class Z3ModelA extends Z3AbstractDisambiguator implements TurkishMorphDis
                 String rootPart = parse.root;
                 roots[j] = rootLm.getVocabulary().indexOf(rootPart);
                 igs[j] = new int[parse.igs.size()];
-                for (int k = 0;k < parse.igs.size(); k++) {
+                for (int k = 0; k < parse.igs.size(); k++) {
                     igs[j][k] = igLm.getVocabulary().indexOf(parse.igs.get(k));
                 }
                 j++;

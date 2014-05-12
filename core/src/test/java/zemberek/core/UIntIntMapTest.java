@@ -36,16 +36,16 @@ public class UIntIntMapTest {
         for (int i = 0; i < 100000; i++) {
             map.put(i, i + 1);
         }
-        for (int i = 0; i < 100000; i+=3) {
+        for (int i = 0; i < 100000; i += 3) {
             map.remove(i);
         }
-        for (int i = 0; i < 100000; i+=3) {
+        for (int i = 0; i < 100000; i += 3) {
             Assert.assertTrue(!map.containsKey(i));
         }
         for (int i = 0; i < 100000; i++) {
             map.put(i, i + 1);
         }
-        for (int i = 0; i < 100000; i+=3) {
+        for (int i = 0; i < 100000; i += 3) {
             Assert.assertTrue(map.containsKey(i));
         }
     }
@@ -74,7 +74,7 @@ public class UIntIntMapTest {
             }
 
             for (int[] keyVal : keyVals) {
-                if(map.containsKey(keyVal[0]))
+                if (map.containsKey(keyVal[0]))
                     map.remove(keyVal[0]);
             }
         }
@@ -93,7 +93,7 @@ public class UIntIntMapTest {
                 countTable.get(keyVal[0]);
             }
             for (int[] keyVal : keyVals) {
-                if(countTable.containsKey(keyVal[0]))
+                if (countTable.containsKey(keyVal[0]))
                     countTable.remove(keyVal[0]);
             }
         }

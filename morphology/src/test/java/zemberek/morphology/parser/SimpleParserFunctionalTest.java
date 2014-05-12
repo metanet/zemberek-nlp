@@ -4,7 +4,6 @@ import com.google.common.io.Resources;
 import junit.framework.Assert;
 import org.junit.Ignore;
 import org.junit.Test;
-
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.io.SimpleTextWriter;
 import zemberek.morphology.lexicon.RootLexicon;
@@ -12,10 +11,6 @@ import zemberek.morphology.lexicon.SuffixProvider;
 import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
-import zemberek.morphology.parser.MorphParse;
-import zemberek.morphology.parser.MorphParser;
-import zemberek.morphology.parser.SimpleParser;
-import zemberek.morphology.parser.TrieBasedParser;
 
 import java.io.File;
 import java.io.IOException;

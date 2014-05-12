@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.io.PrintStream;
 
 class Dumper {
-    
+
     /**
      * dumps the contents of an input stream in hex format to an output stream. both stream are closed at the end of method call
      *
@@ -41,5 +41,5 @@ class Dumper {
         } finally {
             IOs.closeSilently(is, ps);
         }
-    }    
+    }
 }

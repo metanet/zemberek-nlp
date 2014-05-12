@@ -5,7 +5,6 @@
 lexer grammar TurkishLexer;
 
 @header {
-package zemberek.tokenizer.antlr;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Sets;

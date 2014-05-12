@@ -6,7 +6,7 @@ import zemberek.morphology.lexicon.*;
 
 public class DynamicSuffixProviderTest {
 
-    class TestSuffixProvider extends DynamicSuffixProvider{
+    class TestSuffixProvider extends DynamicSuffixProvider {
 
         @Override
         public SuffixData[] defineSuccessorSuffixes(DictionaryItem item) {

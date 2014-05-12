@@ -114,7 +114,7 @@ public class Files {
     }
 
     public static FileFilter extensionFilter(String... extensions) {
-        if(extensions.length==0) {
+        if (extensions.length == 0) {
             return new AcceptAllFilter();
         }
         return new ExtensionFilter(extensions);
@@ -341,7 +341,7 @@ public class Files {
      * @param file2 second file name
      * @return true if contents of two file contents are equal.
      * @throws NullPointerException if one of the filename is null
-     * @throws java.io.IOException          if an IO exception occurs while reading streams.
+     * @throws java.io.IOException  if an IO exception occurs while reading streams.
      */
     public static boolean contentEquals(File file1, File file2) throws IOException {
         checkNotNull(file1, "file1 cannot be null.");

@@ -4,7 +4,6 @@ import zemberek.core.turkish.PhoneticAttribute;
 import zemberek.core.turkish.PhoneticExpectation;
 import zemberek.morphology.lexicon.DictionaryItem;
 
-
 import java.util.EnumSet;
 
 public class StemNode extends MorphNode {

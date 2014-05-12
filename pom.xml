@@ -57,42 +57,17 @@
                 <artifactId>maven-dependency-plugin</artifactId>
                 <executions>
                     <execution>
-                        <id>copy-artifact</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>${project.groupId}</groupId>
-                                    <artifactId>${project.artifactId}</artifactId>
-                                    <version>${project.version}</version>
-                                    <type>${project.packaging}</type>
-                                </artifactItem>
-                            </artifactItems>
-                            <outputDirectory>../dependencies</outputDirectory>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>copy-dependencies</id>
-                        <phase>prepare-package</phase>
+                        <id>copy-dependencies-to-target</id>
+                        <phase>process-classes</phase>
                         <goals>
                             <goal>copy-dependencies</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>../dependencies</outputDirectory>
-                            <overWriteIfNewer>true</overWriteIfNewer>
-                            <excludeGroupIds>
-                                junit,org.hamcrest,org.mockito,org.powermock,${project.groupId}
-                            </excludeGroupIds>
+                            <outputDirectory>
+                                ${project.build.directory}/dependencies
+                            </outputDirectory>
+                            <includeScope>runtime</includeScope>
                         </configuration>
-                    </execution>
-                    <execution>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>sources</goal>
-                        </goals>
                     </execution>
                 </executions>
             </plugin>
@@ -103,7 +78,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>15.0</version>
+            <version>17.0</version>
         </dependency>
         <dependency>
             <groupId>args4j</groupId>

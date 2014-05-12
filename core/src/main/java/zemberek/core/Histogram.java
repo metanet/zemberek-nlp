@@ -353,7 +353,7 @@ public class Histogram<T> implements Iterable<T> {
      */
     public List<T> getSortedList() {
         List<T> l = Lists.newArrayListWithCapacity(vector.size());
-        for(CountSet.Entry<T> entry : getSortedEntryList()) {
+        for (CountSet.Entry<T> entry : getSortedEntryList()) {
             l.add(entry.key);
         }
         return l;

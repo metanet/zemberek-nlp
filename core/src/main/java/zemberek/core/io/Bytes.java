@@ -282,7 +282,8 @@ public class Bytes {
         if (amount < order || amount > arrayLength)
             throw new IllegalArgumentException(
                     "amount of bytes to read cannot be smaller than " + order +
-                            " or larger than array length. Amount is:" + amount);
+                            " or larger than array length. Amount is:" + amount
+            );
 
         final int size = amount < arrayLength ? amount : arrayLength;
         if (size % order != 0)
@@ -321,7 +322,7 @@ public class Bytes {
      * @param amount    amount of data to convert from input array
      * @param bigEndian if it is big endian
      * @return an array of bytes converted from the input array of shorts.
-     *         0xBABE becomes 0xBA, 0xBE (Big Endian) or 0xBE, 0xBA (Little Endian)
+     * 0xBABE becomes 0xBA, 0xBE (Big Endian) or 0xBE, 0xBA (Little Endian)
      */
     public static byte[] toByteArray(short[] sa, int amount, boolean bigEndian) {
         final int size = amount < sa.length ? amount : sa.length;
@@ -348,12 +349,12 @@ public class Bytes {
      * @param bytePerInteger Byte count per integer.
      * @param bigEndian      If it is big endian
      * @return an array of bytes converted from the input array of shorts.
-     *         when bytePerInteger = 2,  ia = {0x0000CAFE, 0x0000BABE}
-     *         returns {0xCA, 0xFE, 0xBA, 0xBE} (Big Endian)
-     *         returns {0xFE, 0xCA, 0xBE, 0xBA } (Little Endian)
-     *         when bytePerInteger=4, ia = {0xCAFEBABE}
-     *         return  {0xCA, 0xFE, 0xBA, 0xBE} (Big Endian)
-     *         returns { 0xBE, 0xBA, 0xFE, 0xCA} (Little Endian)
+     * when bytePerInteger = 2,  ia = {0x0000CAFE, 0x0000BABE}
+     * returns {0xCA, 0xFE, 0xBA, 0xBE} (Big Endian)
+     * returns {0xFE, 0xCA, 0xBE, 0xBA } (Little Endian)
+     * when bytePerInteger=4, ia = {0xCAFEBABE}
+     * return  {0xCA, 0xFE, 0xBA, 0xBE} (Big Endian)
+     * returns { 0xBE, 0xBA, 0xFE, 0xCA} (Little Endian)
      */
     public static byte[] toByteArray(int[] ia, int amount, int bytePerInteger, boolean bigEndian) {
 
@@ -413,7 +414,7 @@ public class Bytes {
      *
      * @param bytes byte array, should be non-null, and not empty.
      * @return a String representation of the number represented by the byte array.
-     *         empty string is byte array is empty.
+     * empty string is byte array is empty.
      * @throws NullPointerException if byte array is null
      */
     public static String toHex(byte[] bytes) {

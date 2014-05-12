@@ -16,7 +16,7 @@ class Bucket implements Comparable<Bucket> {
 
     void add(int i) {
         keyIndexes = Arrays.copyOf(keyIndexes, keyIndexes.length + 1);
-        keyIndexes[keyIndexes.length-1] = i;
+        keyIndexes[keyIndexes.length - 1] = i;
     }
 
     public int compareTo(Bucket o) {

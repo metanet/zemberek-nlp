@@ -1,8 +1,8 @@
 package zemberek.morphology.lexicon.tr;
 
 import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.SecondaryPos;
 import zemberek.core.turkish.RootAttribute;
+import zemberek.core.turkish.SecondaryPos;
 import zemberek.morphology.lexicon.*;
 import zemberek.morphology.lexicon.graph.DynamicSuffixProvider;
 import zemberek.morphology.lexicon.graph.SuffixData;
@@ -448,7 +448,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
     public DerivationalSuffixTemplate Num2Verb = getDerivationalTemplate("Num2Verb", VerbRoot, TerminationType.NON_TERMINAL);
 
     public NullSuffixForm Verb_Default = getNull("Verb_Default", Verb_TEMPLATE);
-//    public NullSuffixForm Verb_Reciprocal = getNull("Verb_Default", Verb_TEMPLATE);
+    //    public NullSuffixForm Verb_Reciprocal = getNull("Verb_Default", Verb_TEMPLATE);
     public NullSuffixForm Verb_De = getNull("Verb_De", Verb_TEMPLATE);
     public NullSuffixForm Verb_Di = getNull("Verb_Di", Verb_TEMPLATE);
     public NullSuffixForm Verb_Ye = getNull("Verb_Ye", Verb_TEMPLATE);
@@ -486,7 +486,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
     public SuffixFormTemplate QuesPron_TEMPLATE = getTemplate("QuesPron_TEMPLATE", QuesPronRoot);
     public NullSuffixForm QuesPron_Default = getNull("QuesPron_Default", QuesPron_TEMPLATE);
 
-    public RootSuffix QuesRoot = new RootSuffix("Ques",PrimaryPos.Question);
+    public RootSuffix QuesRoot = new RootSuffix("Ques", PrimaryPos.Question);
     public SuffixFormTemplate Ques_Template = getTemplate("Ques_Template", QuesRoot);
     public NullSuffixForm Ques_Default = getNull("Ques_Default", Ques_Template);
 
@@ -510,7 +510,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
         Noun_TEMPLATE.connections.add(A3pl_lAr, A3pl_Comp_lAr, A3sg_TEMPLATE);
         Noun_TEMPLATE.indirectConnections
                 .add(POSSESSIVE_FORMS, CASE_FORMS)
-                .add(P1sg_yIm, P2sg_yIn, P3sg_yI, P1pl_yImIz, P2pl_yInIz, P3pl_I,Gen_yIn)
+                .add(P1sg_yIm, P2sg_yIn, P3sg_yI, P1pl_yImIz, P2pl_yInIz, P3pl_I, Gen_yIn)
                 .add(Cop_dIr, PastCop_ydI, NarrCop_ymIs, CondCop_ysA, While_ken)
                 .add(A1sg_yIm, A2sg_sIn, A3sg_Verb_TEMPLATE, A1pl_yIz, A2pl_sInIz)
                 .add(A1sg_m, A2sg_n, A3sg_TEMPLATE, A1pl_k, A2pl_nIz, A3pl_lAr)
@@ -538,7 +538,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
         DemonsPron_Default.copyConnections(DemonsPron_TEMPLATE);
         QuesPron_Default.copyConnections(DemonsPron_TEMPLATE);
         QuantPron_Default.copyConnections(DemonsPron_TEMPLATE).connections.add(A3pl_lAr);
-        QuantPron_Default.indirectConnections.add(P3sg_sI,P3pl_I).remove(P3sg_sI,P3sg_yI);
+        QuantPron_Default.indirectConnections.add(P3sg_sI, P3pl_I).remove(P3sg_sI, P3sg_yI);
         PersPron_Default.copyConnections(DemonsPron_TEMPLATE);
         ReflexPron_Default.copyConnections(DemonsPron_TEMPLATE);
         ReflexPron_Default.indirectConnections.add(Dat_nA, P3sg_sI);
@@ -547,7 +547,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
         Pron2Verb.connections.add(Noun2VerbCopular.connections);
         Pron2Verb.indirectConnections.add(Noun2VerbCopular.indirectConnections);
 
-        Ques_Template.connections.add(Pres_TEMPLATE, NarrCop_ymIs, PastCop_ydI );
+        Ques_Template.connections.add(Pres_TEMPLATE, NarrCop_ymIs, PastCop_ydI);
         Ques_Template.indirectConnections.add(A1sg_yIm, A2sg_sIn, A3sg_Verb_TEMPLATE, A1pl_yIz, A1pl_yIz, A2pl_sInIz);
 
         Ques_Default.copyConnections(Ques_Template);
@@ -712,12 +712,12 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
 
         //---------------------------- Noun -----------------------------------------------------------------------
 
-        A3pl_lAr.connections.add(POSSESSIVE_FORMS).remove(P3pl_lArI).add(P3sg_yI,P3pl_I).remove(P3sg_sI);
+        A3pl_lAr.connections.add(POSSESSIVE_FORMS).remove(P3pl_lArI).add(P3sg_yI, P3pl_I).remove(P3sg_sI);
         A3pl_lAr.indirectConnections
                 .add(Noun2VerbCopular)
                 .add(Noun2VerbCopular.allConnections()).remove(A3pl_Verb_lAr)
                 .add(CASE_FORMS)
-                .add(Dat_nA,Abl_ndAn,Loc_ndA,Acc_nI,Nom_TEMPLATE,Gen_nIn)
+                .add(Dat_nA, Abl_ndAn, Loc_ndA, Acc_nI, Nom_TEMPLATE, Gen_nIn)
                 .add(A1pl_yIz, A2pl_sInIz);
 
         //TODO: check below.
@@ -810,10 +810,10 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
         P2pl_yInIz.connections.add(CASE_FORMS);
         P2pl_yInIz.indirectConnections.add(P2pl_InIz.indirectConnections);
 
-        P3pl_lArI.connections.add(Dat_nA,Abl_ndAn,Loc_ndA,Acc_nI,Nom_TEMPLATE,Gen_nIn);
+        P3pl_lArI.connections.add(Dat_nA, Abl_ndAn, Loc_ndA, Acc_nI, Nom_TEMPLATE, Gen_nIn);
         P3pl_lArI.indirectConnections.add(Noun2VerbCopular).add(Noun2VerbCopular.allConnections());
 
-        P3pl_I.connections.add(Dat_nA,Abl_ndAn,Loc_ndA,Acc_nI,Nom_TEMPLATE,Gen_nIn);
+        P3pl_I.connections.add(Dat_nA, Abl_ndAn, Loc_ndA, Acc_nI, Nom_TEMPLATE, Gen_nIn);
         P3pl_I.indirectConnections.add(Noun2VerbCopular).add(Noun2VerbCopular.allConnections());
 
         With_lI.connections.add(Adj_TEMPLATE.connections);
@@ -1175,9 +1175,9 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
         if (suffixConstraint.isEmpty()) {
             switch (item.primaryPos) {
                 case Noun:
-                    if(item.hasAttribute(RootAttribute.CompoundP3sg))
+                    if (item.hasAttribute(RootAttribute.CompoundP3sg))
                         return Noun_Comp_P3sg;
-                    if(item.hasAttribute(RootAttribute.CompoundP3sgRoot))
+                    if (item.hasAttribute(RootAttribute.CompoundP3sgRoot))
                         return Noun_Comp_P3sg_Root;
                     switch (item.secondaryPos) {
                         case ProperNoun:
@@ -1276,7 +1276,7 @@ public class TurkishSuffixes extends DynamicSuffixProvider {
     private void getForVerb(DictionaryItem item, SuffixData original, SuffixData modified) {
         original.add(Verb_TEMPLATE.allConnections().remove(Caus_t));
         modified.add(Verb_TEMPLATE.allConnections().remove(Caus_t));
-        for (RootAttribute attribute :  item.attrs) {
+        for (RootAttribute attribute : item.attrs) {
             switch (attribute) {
                 case Aorist_A:
                     original.add(Aor_Ar, AorPart_Ar_2Adj);

@@ -8,7 +8,6 @@ import zemberek.morphology.lexicon.tr.TurkishSuffixes;
 import zemberek.morphology.parser.MorphParse;
 import zemberek.morphology.parser.SimpleParser;
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public class TurkishSuffixesTest {
 
     @Test
     public void testCase() {
-        Tester tester = new Tester("elma","armut");
+        Tester tester = new Tester("elma", "armut");
         tester.assertHasParses("elma", "armut", "elmada", "armutta");
     }
 
@@ -35,8 +34,8 @@ public class TurkishSuffixesTest {
 
     @Test
     public void testVoicingOptional() {
-        Tester tester = new Tester("yok [A:Voicing]","yok");
-        tester.assertHasParses("yok", "yoka", "yoğa" ,"yoktan");
+        Tester tester = new Tester("yok [A:Voicing]", "yok");
+        tester.assertHasParses("yok", "yoka", "yoğa", "yoktan");
         tester.assertUnParseable("yoğta", "yokku");
     }
 
@@ -51,7 +50,7 @@ public class TurkishSuffixesTest {
     @Test
     public void testCompounds() {
         Tester tester = new Tester("zeytinyağı [A:CompoundP3sg; Roots:zeytin-yağ]");
-        tester.assertHasParses("zeytinyağcık", "zeytinyağım", "zeytinyağına", "zeytinyağlılar", "zeytinyağlılarım","zeytinyağı", "zeytinyağcığa", "zeytinyağlarım");
+        tester.assertHasParses("zeytinyağcık", "zeytinyağım", "zeytinyağına", "zeytinyağlılar", "zeytinyağlılarım", "zeytinyağı", "zeytinyağcığa", "zeytinyağlarım");
         tester.assertUnParseable("zeytinyağılar", "zeytinyağıcık");
     }
 
@@ -65,8 +64,8 @@ public class TurkishSuffixesTest {
     //TODO elmalidir should have single parse
     @Test
     public void testWithAndWithout() {
-        Tester tester = new Tester("elma", "kitap","Ankara");
-        tester.assertHasParses("elmalı", "elmasız", "kitaplı", "kitapsız", "elmalıydı", "elmalıdır","ankarasız");
+        Tester tester = new Tester("elma", "kitap", "Ankara");
+        tester.assertHasParses("elmalı", "elmasız", "kitaplı", "kitapsız", "elmalıydı", "elmalıdır", "ankarasız");
         tester.assertUnParseable("elmayalı", "elmalarlı", "elmadasız", "elmalarsız");
     }
 
@@ -82,8 +81,8 @@ public class TurkishSuffixesTest {
     @Test
     public void questMi() {
         // noun
-        Tester tester = new Tester("mi [P:Ques]","mu [P:Ques]");
-        tester.assertHasParses("mi","misin","musun","miydik","miymişiz");
+        Tester tester = new Tester("mi [P:Ques]", "mu [P:Ques]");
+        tester.assertHasParses("mi", "misin", "musun", "miydik", "miymişiz");
     }
 
     @Test
@@ -173,7 +172,6 @@ public class TurkishSuffixesTest {
     }
 
 
-
     @Test
     public void testPassive() {
         // Noun-Noun
@@ -224,8 +222,8 @@ public class TurkishSuffixesTest {
 
     @Test
     public void testImp() {
-        Tester tester = new Tester("aramak", "gitmek [A:Voicing, Aorist_A]", "hapsetmek [A:Voicing]","buyurmak [A:LastVowelDrop]");
-        tester.assertHasParses("ara", "arayın", "git", "gitme", "gidiniz", "gitsene", "gitsenize", "aramayacak", "aramasın", "gitmesin", "arasınlar", "gitmesinler","buyrun");
+        Tester tester = new Tester("aramak", "gitmek [A:Voicing, Aorist_A]", "hapsetmek [A:Voicing]", "buyurmak [A:LastVowelDrop]");
+        tester.assertHasParses("ara", "arayın", "git", "gitme", "gidiniz", "gitsene", "gitsenize", "aramayacak", "aramasın", "gitmesin", "arasınlar", "gitmesinler", "buyrun");
         tester.assertHasParses("aramasanıza", "aramayın", "gitmeyin");
         tester.assertUnParseable(suffixProvider.Pass, "hapsedin");
     }
@@ -252,7 +250,7 @@ public class TurkishSuffixesTest {
     @Test
     public void testInf2() {
         Tester tester = new Tester("aramak", "çalışmak");
-        tester.assertHasParses("çalışmalarını","arayış");
+        tester.assertHasParses("çalışmalarını", "arayış");
     }
 
     @Test

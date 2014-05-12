@@ -32,8 +32,8 @@ public class RootLexicon implements Iterable<DictionaryItem> {
         itemMap.put(item.lemma, item);
     }
 
-    public void addAll(Iterable<DictionaryItem>items) {
-        for(DictionaryItem item : items) {
+    public void addAll(Iterable<DictionaryItem> items) {
+        for (DictionaryItem item : items) {
             add(item);
         }
     }
@@ -55,8 +55,8 @@ public class RootLexicon implements Iterable<DictionaryItem> {
             return Collections.emptyList();
         List<DictionaryItem> matches = Lists.newArrayListWithCapacity(1);
         for (DictionaryItem item : items) {
-            if(item.primaryPos==pos)
-              matches.add(item);
+            if (item.primaryPos == pos)
+                matches.add(item);
         }
         return matches;
     }

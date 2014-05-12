@@ -61,7 +61,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -78,7 +78,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -95,7 +95,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -111,7 +111,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -127,7 +127,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -144,7 +144,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -161,7 +161,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -178,7 +178,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -194,7 +194,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -210,7 +210,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -227,7 +227,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -244,7 +244,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -261,7 +261,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -278,7 +278,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -295,7 +295,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -312,7 +312,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -328,7 +328,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -345,7 +345,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -361,7 +361,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -377,7 +377,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -394,7 +394,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -411,7 +411,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -428,7 +428,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -445,7 +445,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -462,7 +462,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -479,7 +479,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -496,7 +496,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -513,7 +513,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -529,7 +529,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -545,7 +545,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -561,7 +561,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -578,7 +578,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -596,7 +596,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -615,7 +615,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -631,7 +631,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -648,7 +648,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -664,7 +664,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -681,7 +681,7 @@ public class Systems {
      * security access to read this property or the property does not exist.</p>
      * <p/>
      * <p>
-     * This value is initialized when the class is loaded. If {@link System#setProperty(String,String)}
+     * This value is initialized when the class is loaded. If {@link System#setProperty(String, String)}
      * or {@link System#setProperties(java.util.Properties)} is called after this class is loaded, the value
      * will be out of sync with that System property.
      * </p>
@@ -1049,6 +1049,7 @@ public class Systems {
     }
 
     //-----------------------------------------------------------------------
+
     /**
      * <p>Gets a System property, defaulting to <code>null</code> if the property
      * cannot be read.</p>
@@ -1083,7 +1084,7 @@ public class Systems {
      *
      * @param requiredVersion the required version, for example 131
      * @return <code>true</code> if the actual version is equal or greater
-     *         than the required version
+     * than the required version
      * @since 2.0
      */
     public static boolean isJavaVersionAtLeast(int requiredVersion) {

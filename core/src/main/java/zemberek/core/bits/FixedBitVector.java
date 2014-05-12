@@ -3,7 +3,7 @@ package zemberek.core.bits;
 /**
  * A fixed size bit vector. Size can be maximum 2^31-1
  */
-public class  FixedBitVector {
+public class FixedBitVector {
     private int[] words;
     public final int length;
 
@@ -18,7 +18,7 @@ public class  FixedBitVector {
     }
 
     public FixedBitVector(int length) {
-        if(length<0)
+        if (length < 0)
             throw new IllegalArgumentException("Length cannot be negative. But it is:" + length);
         this.length = length;
         int wordCount = ((length + 31) >> 5);

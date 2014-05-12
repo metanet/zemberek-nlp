@@ -105,7 +105,7 @@ public class TurkishNumeralEndingMachine {
      * @param numStr input suppose to have digits in it. It may contain alphanumeric values.
      * @return last Turkish word pronunciation of the imput number.
      */
-    public  String find(String numStr) {
+    public String find(String numStr) {
         State current = ROOT;
         for (int i = numStr.length() - 1; i >= 0; i--) {
             int k = numStr.charAt(i) - '0';

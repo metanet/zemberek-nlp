@@ -100,7 +100,7 @@ class StringFilters {
     }
 
     public static boolean canPassAll(String s, Filter<String>... filters) {
-        
+
         for (Filter filter : filters) {
             if (!filter.canPass(s))
                 return false;

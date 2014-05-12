@@ -19,7 +19,7 @@ public class LongBitVectorTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void initializationOutOfBOund() {
-        new LongBitVector(Integer.MAX_VALUE * 64L + 1L);
+        new LongBitVector(Integer.MIN_VALUE);
     }
 
     @Test
@@ -148,7 +148,7 @@ public class LongBitVectorTest {
     public void performanceTest() {
         int itCount = 5;
         Random rnd = new Random(0xbeefcafe);
-        final int size = 20000000;
+        final int size = 20000;
         int[] oneIndexes = new int[size];
         int k = 0;
         for (int i = 0; i < oneIndexes.length; i++) {

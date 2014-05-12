@@ -404,7 +404,7 @@ public class SparseIntVectorTest {
                         break;
                 }
             }
-            System.out.println(i+" Calculated=" + kc + " Actual=" + siv.keyCount);
+            System.out.println(i + " Calculated=" + kc + " Actual=" + siv.keyCount);
         }
     }
 

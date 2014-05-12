@@ -8,14 +8,9 @@ import org.junit.Test;
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.io.SimpleTextWriter;
 import zemberek.core.io.Strings;
-import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.SecondaryPos;
-import zemberek.core.turkish.RootAttribute;
-import zemberek.core.turkish.TurkicSeq;
-import zemberek.core.turkish.TurkishAlphabet;
+import zemberek.core.turkish.*;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
-
 
 import java.io.File;
 import java.io.IOException;

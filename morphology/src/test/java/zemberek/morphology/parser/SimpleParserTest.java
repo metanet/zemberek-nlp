@@ -185,7 +185,7 @@ public class SimpleParserTest {
             Noun_Comp_P3sg_Root.indirectConnections.add(Pnon_TEMPLATE, Nom_TEMPLATE);
 
             registerForms(Noun_TEMPLATE, Noun_Deriv, A3sg_TEMPLATE, Pnon_TEMPLATE, Nom_TEMPLATE);
-            registerForms(Noun_Default, A3pl_lAr, P1sg_Im, Dat_yA, Dat_nA, Dim_CIK,Noun_Comp_P3sg_Root,Noun_Comp_P3sg,A3pl_Comp_lAr);
+            registerForms(Noun_Default, A3pl_lAr, P1sg_Im, Dat_yA, Dat_nA, Dim_CIK, Noun_Comp_P3sg_Root, Noun_Comp_P3sg, A3pl_Comp_lAr);
 
         }
 

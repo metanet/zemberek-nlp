@@ -20,7 +20,7 @@ public class StringHashKeyProvider implements IntHashKeyProvider {
         String s = strings.get(index);
         int[] chars = new int[s.length()];
         for (int i = 0; i < chars.length; i++) {
-            chars[i]=s.charAt(i);
+            chars[i] = s.charAt(i);
         }
         return chars;
     }

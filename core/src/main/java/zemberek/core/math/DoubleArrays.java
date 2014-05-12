@@ -119,9 +119,9 @@ public class DoubleArrays {
      * @param bytez  input byte array
      * @param amount input, size of the byte array
      * @return double array inncluding the normalized double value of each byte elements as Little-Endian representation
-     *         For 0xABCD:
-     *         Big-Endian Rep.-->0xABCD
-     *         Little-Endian Rep-->0xCDBA
+     * For 0xABCD:
+     * Big-Endian Rep.-->0xABCD
+     * Little-Endian Rep-->0xCDBA
      */
     public static double[] normalize16bitLittleEndian(byte[] bytez, int amount) {
         if ((amount & 1) != 0) {

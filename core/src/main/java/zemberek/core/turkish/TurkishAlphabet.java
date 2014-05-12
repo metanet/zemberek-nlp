@@ -174,12 +174,12 @@ public class TurkishAlphabet {
     }
 
     protected static final ImmutableMap<TurkicLetter, TurkicLetter> devoicingMap = new ImmutableMap.Builder<TurkicLetter, TurkicLetter>()
-        .put(L_b, L_p)
-        .put(L_c, L_cc)
-        .put(L_d, L_t)
-        .put(L_g, L_k)
-        .put(L_gg, L_k)
-        .build();
+            .put(L_b, L_p)
+            .put(L_c, L_cc)
+            .put(L_d, L_t)
+            .put(L_g, L_k)
+            .put(L_gg, L_k)
+            .build();
 
     public TurkicLetter devoice(TurkicLetter l) {
         return devoicingMap.get(l);
@@ -233,7 +233,7 @@ public class TurkishAlphabet {
      */
     public int getAlphabeticIndex(char c) {
         if (!isValid(c))
-            throw new IllegalArgumentException("unexpected char:" + c + " code:" + (int)c);
+            throw new IllegalArgumentException("unexpected char:" + c + " code:" + (int) c);
         return TURKISH_ALPHABET_INDEXES[c];
     }
 

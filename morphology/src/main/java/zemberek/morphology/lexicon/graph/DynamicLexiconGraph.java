@@ -2,13 +2,13 @@ package zemberek.morphology.lexicon.graph;
 
 import com.google.common.collect.Maps;
 import com.google.common.collect.Sets;
+import zemberek.core.turkish.PhoneticAttribute;
+import zemberek.core.turkish.PhoneticExpectation;
 import zemberek.morphology.lexicon.DictionaryItem;
 import zemberek.morphology.lexicon.SuffixForm;
 import zemberek.morphology.lexicon.SuffixProvider;
 import zemberek.morphology.lexicon.SuffixSurfaceNodeGenerator;
 import zemberek.morphology.lexicon.tr.StemNodeGenerator;
-import zemberek.core.turkish.PhoneticAttribute;
-import zemberek.core.turkish.PhoneticExpectation;
 
 import java.util.HashSet;
 import java.util.List;

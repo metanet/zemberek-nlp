@@ -1,12 +1,6 @@
 package zemberek.morphology.lexicon.tr;
 
-import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.PhoneticAttribute;
-import zemberek.core.turkish.PhoneticExpectation;
-import zemberek.core.turkish.RootAttribute;
-import zemberek.core.turkish.TurkicLetter;
-import zemberek.core.turkish.TurkicSeq;
-import zemberek.core.turkish.TurkishAlphabet;
+import zemberek.core.turkish.*;
 import zemberek.morphology.lexicon.DictionaryItem;
 import zemberek.morphology.lexicon.LexiconException;
 import zemberek.morphology.lexicon.SuffixProvider;

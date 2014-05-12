@@ -3,7 +3,7 @@ package zemberek.tokenization;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Sets;
 import zemberek.core.io.SimpleTextReader;
-import zemberek.tokenizer.PerceptronSentenceBoundaryDetecor;
+import zemberek.tokenizer.PerceptronSentenceBoundaryDetector;
 import zemberek.tokenizer.SentenceBoundaryDetector;
 import zemberek.tokenizer.SimpleSentenceBoundaryDetector;
 
@@ -20,13 +20,13 @@ public class SentenceBoundaryDetectorsComparison {
         List<String> testSentences = SimpleTextReader.trimmingUTF8Reader(
                 new File("tokenization/src/test/resources/tokenizer/Test.txt")).asStringList();
         Stopwatch sw = Stopwatch.createStarted();
-        PerceptronSentenceBoundaryDetecor perceptron = new PerceptronSentenceBoundaryDetecor.Trainer(
+        PerceptronSentenceBoundaryDetector perceptron = new PerceptronSentenceBoundaryDetector.Trainer(
                 new File("tokenization/src/test/resources/tokenizer/Total.txt"),
                 2).train();
         System.out.println("Train Elapsed:" + sw.elapsed(TimeUnit.MILLISECONDS));
         test(testSentences, perceptron);
         SimpleSentenceBoundaryDetector ruleBased = new SimpleSentenceBoundaryDetector();
-       // test(testSentences, ruleBased);
+        // test(testSentences, ruleBased);
     }
 
     public static void test(List<String> sentences, SentenceBoundaryDetector detector) {
@@ -36,7 +36,7 @@ public class SentenceBoundaryDetectorsComparison {
         for (String sentence : sentences) {
             sb.append(sentence);
             // in approximately every 20 sentences we skip adding a space between sentences.
-            if (rnd.nextInt(PerceptronSentenceBoundaryDetecor.SKIP_SPACE_FREQUENCY) != 1 && sentenceCounter < sentences.size() - 1) {
+            if (rnd.nextInt(PerceptronSentenceBoundaryDetector.SKIP_SPACE_FREQUENCY) != 1 && sentenceCounter < sentences.size() - 1) {
                 sb.append(" ");
             }
             sentenceCounter++;
@@ -58,8 +58,8 @@ public class SentenceBoundaryDetectorsComparison {
                 hit++;
                 //System.out.println(s);
             } else
-              System.out.println(s + " -");
+                System.out.println(s + " -");
         }
-        System.out.println("Total=" + sentences.size() + " Hit=" + hit + " Precision:" + hit*100d/sentences.size());
+        System.out.println("Total=" + sentences.size() + " Hit=" + hit + " Precision:" + hit * 100d / sentences.size());
     }
 }

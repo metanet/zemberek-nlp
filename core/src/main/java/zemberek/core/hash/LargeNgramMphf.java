@@ -29,6 +29,7 @@ public class LargeNgramMphf implements Mphf {
 
     /**
      * Same as generate(File file, int chunkBits) but uses DEFAULT_CHUNK_SIZE_IN_BITS for chunk size.
+     *
      * @param file binary key file
      * @return generated LargeNgramMphf
      */

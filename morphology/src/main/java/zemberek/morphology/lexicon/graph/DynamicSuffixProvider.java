@@ -74,7 +74,7 @@ public abstract class DynamicSuffixProvider implements SuffixProvider {
     public abstract SuffixData[] defineSuccessorSuffixes(DictionaryItem item);
 
     @Override
-    public abstract SuffixForm getRootSet(DictionaryItem item,  SuffixData successors);
+    public abstract SuffixForm getRootSet(DictionaryItem item, SuffixData successors);
 
     protected void registerForms(SuffixForm... setz) {
         for (SuffixForm formSet : setz) {

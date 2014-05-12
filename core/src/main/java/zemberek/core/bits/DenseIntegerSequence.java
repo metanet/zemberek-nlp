@@ -134,7 +134,7 @@ public class DenseIntegerSequence {
      * @throws java.io.IOException if an error occurs while writing.
      */
     public void serialize(File file) throws IOException {
-        try(DataOutputStream dos= new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
+        try (DataOutputStream dos = new DataOutputStream(new BufferedOutputStream(new FileOutputStream(file)))) {
             serialize(dos);
         }
     }

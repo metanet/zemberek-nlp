@@ -447,7 +447,7 @@ public class MultiLevelMphf implements Mphf {
 
     /**
      * @return total bytes used for this structure.
-     *         This is an average number and it adds 12 bytes per array as overhead
+     * This is an average number and it adds 12 bytes per array as overhead
      */
     public long totalBytesUsed() {
         long result = 12; // array overhead

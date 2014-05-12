@@ -147,12 +147,14 @@ public class TurkishAlphabetTest {
     public void alphabetShouldNotHaveDuplicateChars() {
         final HashMultiset<Character> lowerCaseChars = HashMultiset.create(
                 Collections2.transform(Lists.newArrayList(TurkishAlphabet.TURKISH_LETTERS),
-                new Function<TurkicLetter, Character>() {
-                    @Override
-                    public Character apply(TurkicLetter input) {
-                        return input.charValue();
-                    }
-                }));
+                        new Function<TurkicLetter, Character>() {
+                            @Override
+                            public Character apply(TurkicLetter input) {
+                                return input.charValue();
+                            }
+                        }
+                )
+        );
 
         for (Multiset.Entry<Character> characterEntry : lowerCaseChars.entrySet()) {
             Assert.assertThat("For char " + characterEntry.getElement() + ", count must be null", characterEntry.getCount(), is(1));

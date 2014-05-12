@@ -44,7 +44,7 @@ public class LogMathTest {
                 Assert.assertEquals(logSumExpected, LogMath.logSum(Math.log(a), Math.log(b)), 0.001);
             }
         }
-    }    
+    }
 
     @Test
     public void logSumExactTest() throws IOException {
@@ -176,8 +176,8 @@ public class LogMathTest {
         Assert.assertTrue(maxError < 0.0005);
         System.out.println(sw.elapsed(TimeUnit.MILLISECONDS));
         sw.stop();
-    }    
-    
+    }
+
     @Test
     public void testLog2() {
         Assert.assertEquals(2, (int) LogMath.log2(4));

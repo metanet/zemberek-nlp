@@ -129,7 +129,7 @@ public class ProcessRunner {
     /**
      * A thread copies an input stream to an output stream.
      */
-    class SyncPipe  {
+    class SyncPipe {
         InputStream is;
         OutputStream os;
         boolean closeStreams;

@@ -8,8 +8,8 @@ public class SuffixFormTemplate extends SuffixForm {
         super(index, id, suffix, type);
     }
 
-    public SuffixFormTemplate(int index,String id, Suffix suffix) {
-        super(index,id, suffix, TerminationType.TRANSFER);
+    public SuffixFormTemplate(int index, String id, Suffix suffix) {
+        super(index, id, suffix, TerminationType.TRANSFER);
     }
 
 

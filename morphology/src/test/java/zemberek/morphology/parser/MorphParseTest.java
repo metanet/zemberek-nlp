@@ -102,7 +102,7 @@ public class MorphParseTest {
                 {"leh", "lehimeydi"},
                 {"dekorasyon", "dekorasyonundaki"},
                 {"yap", "yapacak"},
-                {"yap", "yapacak","yapacağınaysa"}
+                {"yap", "yapacak", "yapacağınaysa"}
         };
 
         int i = 0;

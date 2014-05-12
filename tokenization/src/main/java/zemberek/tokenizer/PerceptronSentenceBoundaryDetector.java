@@ -1,9 +1,8 @@
 package zemberek.tokenizer;
 
-import com.google.common.base.Charsets;
 import com.google.common.collect.Sets;
-import com.google.common.io.Resources;
 import zemberek.core.DoubleValueSet;
+import zemberek.core.io.ResourceUtil;
 import zemberek.core.io.SimpleTextReader;
 
 import java.io.File;
@@ -21,7 +20,7 @@ public class PerceptronSentenceBoundaryDetector implements SentenceBoundaryDetec
 
     static {
         try {
-            for (String line : Resources.readLines(Resources.getResource("tokenizer/abbreviations.txt"), Charsets.UTF_8)) {
+            for (String line : ResourceUtil.readAllLines("tokenizer/abbreviations.txt", PerceptronSentenceBoundaryDetector.class.getClassLoader())) {
                 final int abbrEndIndex = line.indexOf(":");
                 if (abbrEndIndex > 0) {
                     final String abbr = line.substring(0, abbrEndIndex);
@@ -174,7 +173,7 @@ public class PerceptronSentenceBoundaryDetector implements SentenceBoundaryDetec
                 trimLength = sb.length();
             }
             features.add("5:" + currentWord.substring(0, trimLength));
-            features.add("5a:" + currentWord.substring(currentWord.length()-trimLength, currentWord.length()));
+            features.add("5a:" + currentWord.substring(currentWord.length() - trimLength, currentWord.length()));
             features.add("8:" + currentWord);
             features.add("9:" + getMetaChars(currentWord));
 /*            features.add("9a:" + getMetaChars(currentWord));
@@ -182,7 +181,7 @@ public class PerceptronSentenceBoundaryDetector implements SentenceBoundaryDetec
             features.add("9c:" + getMetaChars(currentWord));*/
             features.add("9d:" + Character.isUpperCase(currentWord.charAt(0)));
             int dotIndex = currentWord.indexOf('.');
-            features.add("9e:" + String.valueOf(dotIndex<currentWord.length()-1));
+            features.add("9e:" + String.valueOf(dotIndex < currentWord.length() - 1));
         }
 
         String previousWord;
@@ -249,7 +248,7 @@ public class PerceptronSentenceBoundaryDetector implements SentenceBoundaryDetec
         features.add("12b:" + String.valueOf(numberOfChars(currentWord, '.') == 3));
         features.add("12c:" + String.valueOf(numberOfChars(previousWord, '.')));
         features.add("12d:" + String.valueOf(numberOfChars(nextWord, '.')));
-        features.add("12e:" + String.valueOf(numberOfChars(nextWord, '.')==2));
+        features.add("12e:" + String.valueOf(numberOfChars(nextWord, '.') == 2));
         features.add("13:" + String.valueOf(TurkishAbbreviationSet.contains(currentWord + ".")));
         features.add("14:" + String.valueOf(TurkishAbbreviationSet.contains(nextWord)));
         features.add("15:" + String.valueOf(potentialWebSite(currentWord)));

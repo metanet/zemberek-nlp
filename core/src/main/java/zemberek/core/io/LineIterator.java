@@ -22,7 +22,10 @@ package zemberek.core.io;
 
 import com.google.common.base.Preconditions;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 

@@ -52,12 +52,12 @@ public class StrictTurkishSyllableParser implements SyllableParser {
      *
      * @param seq: turkce harf dizisi.
      * @return int, 1,2,3 ya da 4 donerse giris dizisinin dizinin sondan o
-     *         kadarharfi heceyi temsil eder -1 donerse hecenin bulunamadigi
-     *         anlamina gelir. sistem yabanci harf ya da isaretlerin oldugu ya
-     *         da kural disi kelimeleri heceleyemez. (ornegin, three, what vs.)
-     *         sistem su anda basta bulunan iki harf sessiz oldugu
-     *         durumlari kabul etmekte ama buna kisitlama getirilmesi iyi olur.
-     *         sadece "tr", "st", "kr" gibi girislere izin verilmeli
+     * kadarharfi heceyi temsil eder -1 donerse hecenin bulunamadigi
+     * anlamina gelir. sistem yabanci harf ya da isaretlerin oldugu ya
+     * da kural disi kelimeleri heceleyemez. (ornegin, three, what vs.)
+     * sistem su anda basta bulunan iki harf sessiz oldugu
+     * durumlari kabul etmekte ama buna kisitlama getirilmesi iyi olur.
+     * sadece "tr", "st", "kr" gibi girislere izin verilmeli
      */
     private int letterCountForLastSyllable(TurkicSeq seq) {
 

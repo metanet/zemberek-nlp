@@ -7,18 +7,13 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.google.common.io.Files;
 import com.google.common.io.LineProcessor;
-import com.google.common.io.Resources;
+import zemberek.core.enums.StringEnum;
+import zemberek.core.enums.StringEnumMap;
+import zemberek.core.io.ResourceUtil;
 import zemberek.core.io.SimpleTextReader;
 import zemberek.core.io.Strings;
-import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.SecondaryPos;
-import zemberek.core.turkish.RootAttribute;
-import zemberek.core.enums.*;
-import zemberek.core.turkish.TurkicLetter;
-import zemberek.core.turkish.TurkicSeq;
-import zemberek.core.turkish.TurkishAlphabet;
+import zemberek.core.turkish.*;
 import zemberek.morphology.lexicon.*;
-
 import zemberek.morphology.structure.Turkish;
 
 import java.io.File;
@@ -30,13 +25,6 @@ import static zemberek.core.turkish.TurkishAlphabet.L_l;
 import static zemberek.core.turkish.TurkishAlphabet.L_r;
 
 public class TurkishDictionaryLoader {
-
-    public static final List<File> DEFAULT_DICTIONARY_FILES = ImmutableList.of(
-            new File(Resources.getResource("tr/master-dictionary.dict").getFile()),
-            new File(Resources.getResource("tr/secondary-dictionary.dict").getFile()),
-            new File(Resources.getResource("tr/non-tdk.dict").getFile()),
-            new File(Resources.getResource("tr/proper.dict").getFile())
-    );
 
     public static final List<String> DEFAULT_DICTIONARY_RESOURCES = ImmutableList.of(
             "tr/master-dictionary.dict",
@@ -97,6 +85,14 @@ public class TurkishDictionaryLoader {
 
     public static RootLexicon loadDefaultDictionaries(final SuffixProvider suffixProvider) throws IOException {
         List<String> lines = Lists.newArrayList();
+
+        final List<File> DEFAULT_DICTIONARY_FILES = ImmutableList.of(
+                new File(ResourceUtil.getResource("tr/master-dictionary.dict", TurkishDictionaryLoader.class.getClassLoader()).getFile()),
+                new File(ResourceUtil.getResource("tr/secondary-dictionary.dict", TurkishDictionaryLoader.class.getClassLoader()).getFile()),
+                new File(ResourceUtil.getResource("tr/non-tdk.dict", TurkishDictionaryLoader.class.getClassLoader()).getFile()),
+                new File(ResourceUtil.getResource("tr/proper.dict", TurkishDictionaryLoader.class.getClassLoader()).getFile())
+        );
+
         for (File file : DEFAULT_DICTIONARY_FILES) {
             lines.addAll(SimpleTextReader.trimmingUTF8Reader(file).asStringList());
         }

@@ -434,9 +434,9 @@ public class TurkicSeq implements CharSequence, Comparable<TurkicSeq> {
      *
      * @param o kiyaslanacak dizi.
      * @return 'kedi'.compareTo('kedi') -> 0
-     *         'kedi'.compareTo('ke')  -> 2 (boy farki)
-     *         'kedi'.compareTo('kedm') -> -4 (i->m alphabettik sira farki)
-     *         'kedi'.compareTo(null) -> 1
+     * 'kedi'.compareTo('ke')  -> 2 (boy farki)
+     * 'kedi'.compareTo('kedm') -> -4 (i->m alphabettik sira farki)
+     * 'kedi'.compareTo(null) -> 1
      */
     public int compareTo(TurkicSeq o) {
         if (o == null)

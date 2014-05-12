@@ -88,7 +88,8 @@ public class InMemoryBigByteArray {
                 ((d[pageIndex] & 0xff) << 24) |
                         ((d[pageIndex + 1] & 0xff) << 16) |
                         ((d[pageIndex + 2] & 0xff) << 8) |
-                        (d[pageIndex + 3] & 0xff));
+                        (d[pageIndex + 3] & 0xff)
+        );
     }
 
 }

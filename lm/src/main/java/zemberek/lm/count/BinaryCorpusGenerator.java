@@ -1,7 +1,5 @@
 package zemberek.lm.count;
 
-import zemberek.lm.LmVocabulary;
-
 /**
  * Generates a binary corpus
  */

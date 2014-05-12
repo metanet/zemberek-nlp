@@ -88,12 +88,12 @@ public class StemTrie {
      * @param start    start index where method starts looking the input in the fragment
      * @param fragment the char array to look input array.
      * @return for input: "foo" fragment = "foobar" index = 0, returns 3
-     *         for input: "fool" fragment = "foobar" index = 0, returns 3
-     *         for input: "fool" fragment = "foobar" index = 1, returns 2
-     *         for input: "foo" fragment = "obar" index = 1, returns 2
-     *         for input: "xyzfoo" fragment = "foo" index = 3, returns 2
-     *         for input: "xyzfoo" fragment = "xyz" index = 3, returns 0
-     *         for input: "xyz" fragment = "abc" index = 0, returns 0
+     * for input: "fool" fragment = "foobar" index = 0, returns 3
+     * for input: "fool" fragment = "foobar" index = 1, returns 2
+     * for input: "foo" fragment = "obar" index = 1, returns 2
+     * for input: "xyzfoo" fragment = "foo" index = 3, returns 2
+     * for input: "xyzfoo" fragment = "xyz" index = 3, returns 0
+     * for input: "xyz" fragment = "abc" index = 0, returns 0
      */
     static int getSplitPoint(char[] input, int start, char[] fragment) {
         int fragmentIndex = 0;

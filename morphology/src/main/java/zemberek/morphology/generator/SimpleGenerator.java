@@ -95,7 +95,7 @@ public class SimpleGenerator {
             for (SuffixSurfaceNode successor : token.currentSurfaceNode.getSuccessors()) {
                 if (successor.getSuffixForm().getSuffix() == token.getSuffix()) {
                     newtokens.add(token.getCopy(successor));
-                } else if(successor.getSuffixForm() instanceof NullSuffixForm ) {
+                } else if (successor.getSuffixForm() instanceof NullSuffixForm) {
                     newtokens.add(token.getForNull(successor));
                 }
             }

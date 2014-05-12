@@ -357,6 +357,7 @@ public class LongBitVector {
 
     /**
      * Custom serializer. Method does not closes the output stream.
+     *
      * @param dos data output stream to write.
      * @throws java.io.IOException
      */
@@ -370,6 +371,7 @@ public class LongBitVector {
 
     /**
      * Custom deserializer. It generates a LongBitVector from the stream. Method does not closes the input Stream.
+     *
      * @param dis input stream
      * @return a new LongbotVector loaded from the data input stream.
      * @throws java.io.IOException

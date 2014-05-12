@@ -5,11 +5,11 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Stopwatch;
 import com.google.common.collect.Lists;
 import com.google.common.io.Files;
-import com.google.common.io.Resources;
 import edu.berkeley.nlp.lm.ConfigOptions;
 import edu.berkeley.nlp.lm.StringWordIndexer;
 import edu.berkeley.nlp.lm.io.ArpaLmReader;
 import edu.berkeley.nlp.lm.io.LmReaders;
+import zemberek.core.io.ResourceUtil;
 import zemberek.core.io.SimpleTextWriter;
 import zemberek.core.io.Strings;
 import zemberek.lm.apps.ConvertToSmoothLm;
@@ -59,8 +59,8 @@ public class Z3MarkovModelDisambiguator extends Z3AbstractDisambiguator implemen
     }
 
     public Z3MarkovModelDisambiguator() throws IOException {
-        this(Resources.getResource("tr/ambiguity/root-lm.z3.slm").openStream(),
-                Resources.getResource("tr/ambiguity/ig-lm.z3.slm").openStream());
+        this(ResourceUtil.getResource("tr/ambiguity/root-lm.z3.slm", Z3MarkovModelDisambiguator.class.getClassLoader()).openStream(),
+                ResourceUtil.getResource("tr/ambiguity/ig-lm.z3.slm", Z3MarkovModelDisambiguator.class.getClassLoader()).openStream());
     }
 
     private void initialize() {
@@ -79,7 +79,7 @@ public class Z3MarkovModelDisambiguator extends Z3AbstractDisambiguator implemen
                 arpaFile.getAbsolutePath(),
                 "-smoothFile",
                 binaryFile.getAbsolutePath(),
-                "-spaceUsage","16-8-8");
+                "-spaceUsage", "16-8-8");
     }
 
     public static void generateArpaLm(File corpus, File arpaFile) {

@@ -5,9 +5,6 @@ import org.junit.Test;
 import zemberek.morphology.lexicon.graph.DynamicLexiconGraph;
 import zemberek.morphology.lexicon.tr.TurkishDictionaryLoader;
 import zemberek.morphology.lexicon.tr.TurkishSuffixes;
-import zemberek.morphology.parser.MorphParse;
-import zemberek.morphology.parser.SimpleParser;
-
 
 import java.util.List;
 
@@ -17,8 +14,8 @@ public class CompoundWordsTest {
 
     @Test
     public void parseTest1() {
-        String[] lines = {"yağ","zeytinyağı [A:CompoundP3sg; Roots:zeytin-yağ]"};
-        String[] testSet = {"zeytinyağlı", "zeytinyağıdır","zeytinyağım"};
+        String[] lines = {"yağ", "zeytinyağı [A:CompoundP3sg; Roots:zeytin-yağ]"};
+        String[] testSet = {"zeytinyağlı", "zeytinyağıdır", "zeytinyağım"};
         applyTest(lines, testSet);
     }
 
@@ -42,19 +39,19 @@ public class CompoundWordsTest {
 
     @Test
     public void parseTest2() {
-        String[] lines = {"yazı","alınyazısı [A:CompoundP3sg; Roots:alın-yazı]"};
+        String[] lines = {"yazı", "alınyazısı [A:CompoundP3sg; Roots:alın-yazı]"};
         String[] trueSet = {
                 "alınyazısı", "alınyazısıdır",
-                "alınyazım","alınyazıma","alınyazımda","alınyazımdan","alınyazımdır","alınyazımsa"
+                "alınyazım", "alınyazıma", "alınyazımda", "alınyazımdan", "alınyazımdır", "alınyazımsa"
         };
         applyTest(lines, trueSet);
     }
 
     @Test
     public void parseTest3() {
-        String[] lines = {"kuyruk","atkuyruğu [A:CompoundP3sg; Roots:at-kuyruk]"};
-        String[] trueSet = { "atkuyruğum" };
-        String[] falseSet = { "atkuyruk","atkuyrukum" };
+        String[] lines = {"kuyruk", "atkuyruğu [A:CompoundP3sg; Roots:at-kuyruk]"};
+        String[] trueSet = {"atkuyruğum"};
+        String[] falseSet = {"atkuyruk", "atkuyrukum"};
         applyTest(lines, trueSet);
         applyFalseTest(lines, falseSet);
     }

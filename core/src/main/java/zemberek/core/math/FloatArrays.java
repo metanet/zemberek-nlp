@@ -118,9 +118,9 @@ public class FloatArrays {
      * @param bytez  input byte array
      * @param amount input, size of the byte array
      * @return float array inncluding the normalized float value of each byte elements as Little-Endian representation
-     *         For 0xABCD:
-     *         Big-Endian Rep.-->0xABCD
-     *         Little-Endian Rep-->0xCDBA
+     * For 0xABCD:
+     * Big-Endian Rep.-->0xABCD
+     * Little-Endian Rep-->0xCDBA
      */
     public static float[] normalize16bitLittleEndian(byte[] bytez, int amount) {
         if ((amount & 1) != 0) {
@@ -193,7 +193,7 @@ public class FloatArrays {
             throw new IllegalArgumentException("Maximum int value must be positive. But it is:" + max);
         }
         int[] iarr = new int[input.length];
-        float divider = (float) ((double)max / 2.0);
+        float divider = (float) ((double) max / 2.0);
         for (int i = 0; i < input.length; i++) {
             float d = input[i];
             if (d < -1.0 || d > 1.0) {
@@ -342,7 +342,7 @@ public class FloatArrays {
      *
      * @param first  first vector.
      * @param second second vector
-     * @param scale scale factor for second
+     * @param scale  scale factor for second
      */
     public static void addToFirstScaled(float[] first, float[] second, float scale) {
         validateArrays(first, second);
@@ -616,5 +616,5 @@ public class FloatArrays {
         float sum = sum(data);
         scaleInPlace(data, 1f / sum);
     }
-    
+
 }

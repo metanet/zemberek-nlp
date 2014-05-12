@@ -6,7 +6,6 @@ import zemberek.core.math.DoubleArrays;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 
 /**
  * A Quantizer that applies binning algorithm to input values to put them in a smaller range.

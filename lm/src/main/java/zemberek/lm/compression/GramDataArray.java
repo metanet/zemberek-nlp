@@ -129,7 +129,7 @@ public class GramDataArray {
      *
      * @param index index value
      * @return integer carrying all fingerprint, probability and backoff value. structure is:
-     *         [fingerprint|probability rank|backoff rank]
+     * [fingerprint|probability rank|backoff rank]
      */
     public int getCompact(int index) {
         final int pageIndex = (index & indexMask) * blockSize;

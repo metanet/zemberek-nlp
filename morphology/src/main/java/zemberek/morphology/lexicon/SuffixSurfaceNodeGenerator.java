@@ -1,14 +1,11 @@
 package zemberek.morphology.lexicon;
 
 import com.google.common.collect.Lists;
-import zemberek.core.turkish.PhoneticAttribute;
-import zemberek.core.turkish.PhoneticExpectation;
-import zemberek.core.turkish.TurkicLetter;
-import zemberek.core.turkish.TurkicSeq;
-import zemberek.core.turkish.TurkishAlphabet;
+import zemberek.core.turkish.*;
 import zemberek.morphology.lexicon.graph.SuffixData;
 import zemberek.morphology.lexicon.graph.SuffixSurfaceNode;
 import zemberek.morphology.lexicon.graph.TerminationType;
+
 import java.util.*;
 
 import static zemberek.core.turkish.PhoneticAttribute.*;

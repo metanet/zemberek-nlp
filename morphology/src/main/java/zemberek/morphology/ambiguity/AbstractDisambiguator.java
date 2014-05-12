@@ -142,14 +142,14 @@ public abstract class AbstractDisambiguator {
                 if (parseString.startsWith("+")) {
                     root = "+";
                     igs = Lists.newArrayList("+Punc");
-                    allIgs ="+Punc";
+                    allIgs = "+Punc";
 
                 } else {
                     root = Strings.subStringUntilFirst(parseString, "+");
                     String rest = "+" + Strings.subStringAfterFirst(parseString, "+");
                     String igsStr = rest.replaceAll("\\^DB", " ");
                     igs = Lists.newArrayList(Splitter.on(" ").omitEmptyStrings().trimResults().split(igsStr));
-                    allIgs =rest.replaceAll("\\^DB", " ");
+                    allIgs = rest.replaceAll("\\^DB", " ");
                 }
             }
             all = parseString;
@@ -158,7 +158,7 @@ public abstract class AbstractDisambiguator {
         String getLastIg() {
             if (igs.size() == 0)
                 return NO_IG;
-            return igs.get(igs.size()-1);
+            return igs.get(igs.size() - 1);
         }
     }
 }

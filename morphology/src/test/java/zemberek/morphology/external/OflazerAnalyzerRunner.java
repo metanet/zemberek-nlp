@@ -152,7 +152,7 @@ public class OflazerAnalyzerRunner {
                 }
                 data.append(root);
                 if (!pos.equals("Noun") && !pos.equals("Verb")) {
-                    if(pos.equals("Adverb"))
+                    if (pos.equals("Adverb"))
                         pos = "Adv";
                     data.append(" [P:").append(pos);
                     if (secPos.length() > 1)
@@ -199,7 +199,7 @@ public class OflazerAnalyzerRunner {
         cleanUnparseables(new File("/home/kodlab/data/lm/unknowns/oflazer-z3.txt"),
                 new File("/home/kodlab/data/lm/unknowns/oflazer-z3-clean.txt"));
         matchLines(new File("/home/kodlab/data/lm/unknowns/oflazer-z3-clean.txt"),
-                new File("/home/kodlab/data/lm/unknowns/oflazer-z3-clean.txt"),"Recip");
+                new File("/home/kodlab/data/lm/unknowns/oflazer-z3-clean.txt"), "Recip");
 
 /*        File expRoot = new File("/home/kodlab/data/lm/unknowns");
         new OflazerAnalyzerRunner(

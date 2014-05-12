@@ -21,7 +21,6 @@
 package zemberek.core.io;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.regex.Pattern;
 
 /**
@@ -152,6 +151,7 @@ public final class Strings {
 
     // ContainsNone
     //-----------------------------------------------------------------------
+
     /**
      * <p>Checks that the String does not contain certain characters.</p>
      * <p/>
@@ -193,7 +193,8 @@ public final class Strings {
 
     /**
      * Checks if the input string only contains allowedCharacters.
-     * @param str input String.
+     *
+     * @param str          input String.
      * @param allowedChars allowed characters.
      * @return if String contains only the allowed characters or input values are null, returns true. false otherwise.
      */
@@ -223,7 +224,7 @@ public final class Strings {
      * @param c     the character to use to compose the {@link String}
      * @param count how many times to repeat the character argument
      * @return a {@link String} composed of the <code>c</code> character
-     *         repeated <code>count</code> times. Empty if <code>count</code> is less then 1
+     * repeated <code>count</code> times. Empty if <code>count</code> is less then 1
      */
     public static String repeat(char c, int count) {
         if (count < 1) return EMPTY_STRING;
@@ -239,8 +240,8 @@ public final class Strings {
      * @param str   the string to use to compose the {@link String}
      * @param count how many times to repeat the string argument
      * @return a {@link String} composed of the <code>str</code> string
-     *         repeated <code>count</code> times. null, if <code>str</code> is null.
-     *         Empty if <code>count</code> is less then 1.
+     * repeated <code>count</code> times. null, if <code>str</code> is null.
+     * Empty if <code>count</code> is less then 1.
      */
     public static String repeat(String str, int count) {
         if (str == null)
@@ -341,7 +342,7 @@ public final class Strings {
      * @param str  the String to pad out, may be null
      * @param size the size to pad to
      * @return right padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      */
     public static String rightPad(String str, int size) {
         return rightPad(str, size, ' ');
@@ -365,7 +366,7 @@ public final class Strings {
      * @param size    the size to pad to
      * @param padChar the character to pad with
      * @return right padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      * @since 2.0
      */
     public static String rightPad(String str, int size, char padChar) {
@@ -403,7 +404,7 @@ public final class Strings {
      * @param size   the size to pad to
      * @param padStr the String to pad with, null or empty treated as single space
      * @return right padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      */
     public static String rightPad(String str, int size, String padStr) {
         if (str == null) {
@@ -453,7 +454,7 @@ public final class Strings {
      * @param str  the String to pad out, may be null
      * @param size the size to pad to
      * @return left padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      */
     public static String leftPad(String str, int size) {
         return leftPad(str, size, " ");
@@ -477,7 +478,7 @@ public final class Strings {
      * @param size    the size to pad to
      * @param padChar the character to pad with
      * @return left padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      * @since 2.0
      */
     public static String leftPad(String str, int size, char padChar) {
@@ -618,7 +619,7 @@ public final class Strings {
      * @param size   the size to pad to
      * @param padStr the String to pad with, null or empty treated as single space
      * @return left padded String or original String if no padding is necessary,
-     *         <code>null</code> if null String input
+     * <code>null</code> if null String input
      */
     public static String leftPad(String str, int size, String padStr) {
         if (str == null) {
@@ -660,7 +661,7 @@ public final class Strings {
      *
      * @param str input string.
      * @return all white spaces are converted to space character and multiple space chars reduced to single space.
-     *         returns null if <code>str<code> is null
+     * returns null if <code>str<code> is null
      */
     public static String whiteSpacesToSingleSpace(String str) {
         if (str == null) return null;
@@ -691,7 +692,7 @@ public final class Strings {
      * @param word     input String
      * @param gramSize size of the gram.
      * @return the grams as an array. if the gram size is larger than the word itself, it retuns an empty array.
-     *         gram size cannot be smaller than 1
+     * gram size cannot be smaller than 1
      * @throws IllegalArgumentException if gram size is smaller than 1
      */
     public static String[] separateGrams(String word, int gramSize) {

@@ -14,7 +14,7 @@ public class SuffixForm {
     // an id that defines the node
     public String id;
     // an id that defines the node
-    public int index=-1;
+    public int index = -1;
     // parent suffix
     public final Suffix suffix;
     // generation word.

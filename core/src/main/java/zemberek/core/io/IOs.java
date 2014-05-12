@@ -169,7 +169,7 @@ public class IOs {
      * @param charset charset string, if null,empty or has only whitespace, system uses default encoding.
      * @return BufferedReader
      * @throws java.io.IOException: if the given encoding is not supported, or an error occurs
-     *                      if given charset is utf-8 and an IO error occurs during utf-8 BOM detection operation.
+     *                              if given charset is utf-8 and an IO error occurs during utf-8 BOM detection operation.
      */
     public static BufferedReader getReader(InputStream is, String charset) throws IOException {
         checkNotNull(is, "input stream cannot be null");
@@ -213,8 +213,7 @@ public class IOs {
      * @param os      output stream
      * @param charset encoding string.
      * @return a bufferedReader for the output stream.
-     * @throws java.io.UnsupportedEncodingException
-     *          if encoding is not supported.
+     * @throws java.io.UnsupportedEncodingException if encoding is not supported.
      */
     public static BufferedWriter getWriter(OutputStream os, String charset)
             throws UnsupportedEncodingException {
@@ -228,8 +227,7 @@ public class IOs {
      * @param os      output stream
      * @param charset encoding string.
      * @return a PrintWriter for the output stream.
-     * @throws java.io.UnsupportedEncodingException
-     *          if encoding is not supported.
+     * @throws java.io.UnsupportedEncodingException if encoding is not supported.
      */
     public static PrintWriter getPrintWriter(OutputStream os, String charset)
             throws UnsupportedEncodingException {
@@ -337,7 +335,7 @@ public class IOs {
      * @param is2 second input stream.
      * @return true if contents of two streams are equal.
      * @throws NullPointerException if one of the stream is null
-     * @throws java.io.IOException          if an IO exception occurs while reading streams.
+     * @throws java.io.IOException  if an IO exception occurs while reading streams.
      */
     public static boolean contentEquals(InputStream is1, InputStream is2) throws IOException {
         try {
@@ -370,7 +368,7 @@ public class IOs {
      *
      * @param is a non null stream
      * @return MD5 of the stream as byte array.
-     * @throws java.io.IOException          if an error occurs during read of the stream.
+     * @throws java.io.IOException  if an error occurs during read of the stream.
      * @throws NullPointerException if input stream is null
      */
     public static byte[] calculateMD5(InputStream is) throws IOException {
@@ -406,7 +404,7 @@ public class IOs {
      *
      * @param is input stream
      * @return if it is an UT8, returns the input stream with three characters already read.
-     * @throws java.io.IOException          if there is an error during reading of first three bytes
+     * @throws java.io.IOException  if there is an error during reading of first three bytes
      * @throws NullPointerException if input stream is null
      */
     static InputStream forceUTF8(InputStream is) throws IOException {
@@ -445,7 +443,7 @@ public class IOs {
      *
      * @param is , an input stream
      * @return a byte array representing the stream data.
-     * @throws java.io.IOException          if an error occurs during the read or write of the streams.
+     * @throws java.io.IOException  if an error occurs during the read or write of the streams.
      * @throws NullPointerException if input stream is null
      */
     public static byte[] readAsByteArray(InputStream is) throws IOException {
@@ -475,7 +473,7 @@ public class IOs {
      * @param lines  the lines to write, null entries produce blank lines
      * @param output the <code>OutputStream</code> to write to, not null, not closed
      * @throws NullPointerException if the output is null
-     * @throws java.io.IOException          if an I/O error occurs
+     * @throws java.io.IOException  if an I/O error occurs
      */
     public static void writeLines(Collection<String> lines, OutputStream output) throws IOException {
         if (lines == null)
@@ -499,7 +497,7 @@ public class IOs {
      * @param lines  the lines to write, null entries produce blank lines
      * @param output the <code>BufferedWriter</code> to write to, not null, not closed
      * @throws NullPointerException if the output is null
-     * @throws java.io.IOException          if an I/O error occurs
+     * @throws java.io.IOException  if an I/O error occurs
      */
     public static void writeLines(Collection<String> lines,
                                   BufferedWriter output) throws IOException {
@@ -514,7 +512,7 @@ public class IOs {
      * @param s      String to write.
      * @param output the <code>OutputStream</code> to write to, not null, not closed
      * @throws NullPointerException if the output is null
-     * @throws java.io.IOException          if an I/O error occurs
+     * @throws java.io.IOException  if an I/O error occurs
      */
     public static void writeString(String s, OutputStream output) throws IOException {
         writeString(s, output, null);
@@ -529,7 +527,7 @@ public class IOs {
      * @param output   the <code>OutputStream</code> to write to, not null, not closed
      * @param encoding character encoding.
      * @throws NullPointerException if the output is null
-     * @throws java.io.IOException          if an I/O error occurs
+     * @throws java.io.IOException  if an I/O error occurs
      */
     public static void writeString(String s,
                                    OutputStream output,
@@ -564,7 +562,7 @@ public class IOs {
      *
      * @param lines the lines to write, null entries produce blank lines
      * @throws NullPointerException if the output is null
-     * @throws java.io.IOException          if an I/O error occurs
+     * @throws java.io.IOException  if an I/O error occurs
      */
     public static void writeToStringLines(
             Collection<?> lines,

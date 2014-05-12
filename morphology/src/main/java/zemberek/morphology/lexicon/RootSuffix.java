@@ -3,7 +3,7 @@ package zemberek.morphology.lexicon;
 
 import zemberek.core.turkish.PrimaryPos;
 
-public class RootSuffix extends  Suffix {
+public class RootSuffix extends Suffix {
 
     public PrimaryPos pos;
 

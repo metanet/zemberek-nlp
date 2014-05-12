@@ -11,13 +11,29 @@
 
     <artifactId>tokenization</artifactId>
 
-    <repositories>
-        <repository>
-            <id>ahmetaa-repo-antlr4</id>
-            <name>ahmetaa Maven Repo on Github</name>
-            <url>https://github.com/ahmetaa/maven-repo/raw/master</url>
-        </repository>
-    </repositories>
+    <profiles>
+        <profile>
+            <id>antlrBuild</id>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>org.antlr</groupId>
+                        <artifactId>antlr4-maven-plugin</artifactId>
+                        <version>4.2.2</version>
+                        <executions>
+                            <execution>
+                                <id>antlr</id>
+                                <goals>
+                                    <goal>antlr4</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <dependencies>
         <dependency>
@@ -25,10 +41,13 @@
             <artifactId>core</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
-            <groupId>antlr4-z3</groupId>
-            <artifactId>antlr4-runtime</artifactId>
-            <version>4.0.1z</version>
+            <groupId>org.antlr</groupId>
+            <artifactId>antlr4</artifactId>
+            <version>4.2.2</version>
         </dependency>
     </dependencies>
+
+
 </project>

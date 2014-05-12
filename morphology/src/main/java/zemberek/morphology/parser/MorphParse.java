@@ -3,11 +3,11 @@ package zemberek.morphology.parser;
 import com.google.common.base.Joiner;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
+import zemberek.core.turkish.PrimaryPos;
+import zemberek.core.turkish.SecondaryPos;
 import zemberek.morphology.lexicon.*;
 import zemberek.morphology.lexicon.graph.StemNode;
 import zemberek.morphology.lexicon.graph.SuffixSurfaceNode;
-import zemberek.core.turkish.PrimaryPos;
-import zemberek.core.turkish.SecondaryPos;
 import zemberek.morphology.structure.StemAndEnding;
 
 import java.util.List;

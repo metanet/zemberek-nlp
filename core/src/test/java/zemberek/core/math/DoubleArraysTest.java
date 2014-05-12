@@ -94,7 +94,7 @@ public class DoubleArraysTest {
     public void testAddToAll() {
         double[] da = {1, 2, 0, -1, -3};
         double[] expected = {2, 3, 1, 0, -2};
-        DoubleArrays.addToAll(da,1);
+        DoubleArrays.addToAll(da, 1);
         Assert.assertTrue(Arrays.equals(expected, da));
     }
 

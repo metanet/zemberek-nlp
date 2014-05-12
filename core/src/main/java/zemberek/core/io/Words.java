@@ -31,6 +31,7 @@ public class Words {
 
     // Wrapping
     //-----------------------------------------------------------------------
+
     /**
      * <p>Wraps a single line of text, identifying words by <code>' '</code>.</p>
      * <p/>
@@ -128,6 +129,7 @@ public class Words {
 
     // Capitalizing
     //-----------------------------------------------------------------------
+
     /**
      * <p>Capitalizes all the whitespace separated words in a String.
      * Only the first letter of each word is changed. To convert the
@@ -208,6 +210,7 @@ public class Words {
     }
 
     //-----------------------------------------------------------------------
+
     /**
      * <p>Converts all the whitespace separated words in a String into capitalized words,
      * that is each word is made up of a titlecase character and then a series of
@@ -267,6 +270,7 @@ public class Words {
     }
 
     //-----------------------------------------------------------------------
+
     /**
      * <p>Uncapitalizes all the whitespace separated words in a String.
      * Only the first letter of each word is changed.</p>
@@ -338,6 +342,7 @@ public class Words {
     }
 
     //-----------------------------------------------------------------------
+
     /**
      * <p>Extracts the initial letters from each word in the String.</p>
      * <p/>
@@ -357,7 +362,7 @@ public class Words {
      *
      * @param str the String to get initials from, may be null
      * @return String of initial letters, <code>null</code> if null String input
-     * @see #initials(String,char[])
+     * @see #initials(String, char[])
      * @since 2.2
      */
     public static String initials(String str) {
@@ -418,6 +423,7 @@ public class Words {
     }
 
     //-----------------------------------------------------------------------
+
     /**
      * Is the character a delimiter.
      *

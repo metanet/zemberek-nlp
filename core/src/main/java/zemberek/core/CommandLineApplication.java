@@ -59,7 +59,7 @@ public abstract class CommandLineApplication {
         CmdLineParser parser = new CmdLineParser(this);
         try {
             parser.parseArgument(args);
-            if(logFile!=null) {
+            if (logFile != null) {
                 com.google.common.io.Files.createParentDirs(logFile);
                 Log.addFileHandler(logFile.toPath());
                 Log.info("Application log is being recorded to %s file.", logFile.getAbsolutePath());

@@ -150,9 +150,9 @@ public class AveragedPerceptronMorphDisambiguator extends AbstractDisambiguator 
 
         for (String ig : ig3s) {
             feats.add(format("15:%s-%s-%s", ig1s[ig1s.length - 1], ig2s[ig2s.length - 1], ig));
-          //  feats.increment1(format("16:%s-%s", ig1s[ig1s.length - 1], ig));
+            //  feats.increment1(format("16:%s-%s", ig1s[ig1s.length - 1], ig));
             feats.add(format("17:%s-%s", ig2s[ig2s.length - 1], ig));
-           // feats.increment1(format("18:%s", ig));
+            // feats.increment1(format("18:%s", ig));
         }
 
 //        for (int k = 0; k < ig3s.length - 1; k++)
@@ -269,7 +269,8 @@ public class AveragedPerceptronMorphDisambiguator extends AbstractDisambiguator 
 
     /**
      * Calculates the best path using Viterbi decoding.
-     * @param sentence sentece with ambiguous wrods.
+     *
+     * @param sentence           sentece with ambiguous wrods.
      * @param useAveragedWeights if true, average weights are used for scoring, else, normal weights are used.
      * @return best parse sequence and its score.
      */
@@ -360,7 +361,6 @@ public class AveragedPerceptronMorphDisambiguator extends AbstractDisambiguator 
     }
 
     public static void main(String[] args) throws IOException {
-
 
 
     }

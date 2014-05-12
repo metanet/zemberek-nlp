@@ -12,8 +12,6 @@ import zemberek.lm.NgramLanguageModel;
 import java.io.*;
 import java.util.Arrays;
 
-import static zemberek.core.math.LogMath.LOG_ZERO;
-
 /**
  * SmoothLm is a compressed, optionally quantized, randomized back-off n-gram language model.
  * It uses Minimal Perfect Hash functions for compression, This means actual n-gram values are not stored in the model.
@@ -318,8 +316,8 @@ public class SmoothLm implements NgramLanguageModel {
 
     /**
      * @return true if ngram exists in the lm.
-     *         if actual key data is loaded during the construction of the compressed lm, the value returned
-     *         by this function cannot be wrong. If not, the return value may be a false positive.
+     * if actual key data is loaded during the construction of the compressed lm, the value returned
+     * by this function cannot be wrong. If not, the return value may be a false positive.
      */
     public boolean ngramExists(int... wordIndexes) {
         final int order = wordIndexes.length;
@@ -373,7 +371,7 @@ public class SmoothLm implements NgramLanguageModel {
      *
      * @param wordIndexes word-index sequence. A word index is the unigram index value.
      * @return dequantized log back-off value of the n-gram.
-     *         if n-gram does not exist, it returns unknownBackoffPenalty value.
+     * if n-gram does not exist, it returns unknownBackoffPenalty value.
      */
     public double getBackoffValue(int... wordIndexes) {
         if (useStupidBackoff)
@@ -399,8 +397,8 @@ public class SmoothLm implements NgramLanguageModel {
      *
      * @param wordIndexes word index sequence. A word index is the unigram index value.
      * @return dequantized log backoff value of the n-gram. if there is no backoff value or n-gram does not exist,
-     *         it returns LOG_ZERO. This mostly happens in the condition that words queried does not exist
-     *         in the vocabulary.
+     * it returns LOG_ZERO. This mostly happens in the condition that words queried does not exist
+     * in the vocabulary.
      * @throws IllegalArgumentException if wordIndexes sequence length is zero or more than n value.
      */
     double getProbabilityRecursive(int... wordIndexes) {
@@ -836,7 +834,7 @@ public class SmoothLm implements NgramLanguageModel {
 
         /**
          * @return Probability value if data was already in the cache. LogMath.LOG_ZERO otherwise.
-         *         This cache may return false positives. Probability of a false positive is about 1/(2^32)
+         * This cache may return false positives. Probability of a false positive is about 1/(2^32)
          */
         public double check(int[] data) {
             int slotHash = SLOT_SEED;

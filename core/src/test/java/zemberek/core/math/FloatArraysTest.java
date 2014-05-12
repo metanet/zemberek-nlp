@@ -232,7 +232,7 @@ public class FloatArraysTest {
     public void testAddToAll() {
         float[] da = {1, 2, 0, -1, -3};
         float[] expected = {2, 3, 1, 0, -2};
-        FloatArrays.addToAll(da,1);
+        FloatArrays.addToAll(da, 1);
         Assert.assertTrue(Arrays.equals(expected, da));
     }
 
@@ -337,5 +337,5 @@ public class FloatArraysTest {
         }
         return true;
     }
-    
+
 }
