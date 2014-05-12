@@ -5,12 +5,12 @@
 lexer grammar TurkishLexer;
 
 @header {
-package zemberek3.shared.tokenizer.zemberek.antlr;
+package zemberek.tokenizer.antlr;
 
 import com.google.common.base.Charsets;
 import com.google.common.collect.Sets;
 import com.google.common.io.Files;
-import com.google.common.io.Resources;
+import zemberek.core.io.ResourceUtil;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ private static Locale localeTr = new Locale("tr");
 
 static {
     try {
-        for(String line: Resources.readLines(Resources.getResource("tokenizer/abbreviations.txt"),Charsets.UTF_8)) {
+        for(String line: ResourceUtil.readAllLines("tokenizer/abbreviations.txt", TurkishLexer.class.getClassLoader())) {
             final int abbrEndIndex = line.indexOf(":");
             if (abbrEndIndex > 0) {
                 final String abbr = line.substring(0, abbrEndIndex);

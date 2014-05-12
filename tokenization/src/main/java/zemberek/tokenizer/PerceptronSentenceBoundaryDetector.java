@@ -3,7 +3,6 @@ package zemberek.tokenizer;
 import com.google.common.base.Charsets;
 import com.google.common.collect.Sets;
 import com.google.common.io.Resources;
-import org.antlr.v4.runtime.Token;
 import zemberek.core.DoubleValueSet;
 import zemberek.core.io.SimpleTextReader;
 
@@ -11,7 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.*;
 
-public class PerceptronSentenceBoundaryDetecor implements SentenceBoundaryDetector {
+public class PerceptronSentenceBoundaryDetector implements SentenceBoundaryDetector {
 
     public static final int SKIP_SPACE_FREQUENCY = 200000;
     public static final String BOUNDARY_CHARS = ".!?";
@@ -38,7 +37,7 @@ public class PerceptronSentenceBoundaryDetecor implements SentenceBoundaryDetect
         }
     }
 
-    public PerceptronSentenceBoundaryDetecor(DoubleValueSet<String> weights) {
+    public PerceptronSentenceBoundaryDetector(DoubleValueSet<String> weights) {
         this.weights = weights;
     }
 
@@ -51,7 +50,7 @@ public class PerceptronSentenceBoundaryDetecor implements SentenceBoundaryDetect
             this.iterationCount = iterationCount;
         }
 
-        public PerceptronSentenceBoundaryDetecor train() throws IOException {
+        public PerceptronSentenceBoundaryDetector train() throws IOException {
             DoubleValueSet<String> weights = new DoubleValueSet<>();
             List<String> sentences = SimpleTextReader.trimmingUTF8Reader(trainFile).asStringList();
 
@@ -106,7 +105,7 @@ public class PerceptronSentenceBoundaryDetecor implements SentenceBoundaryDetect
                     }
                 }
             }
-            return new PerceptronSentenceBoundaryDetecor(weights);
+            return new PerceptronSentenceBoundaryDetector(weights);
         }
     }
 

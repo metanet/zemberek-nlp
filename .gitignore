@@ -1,13 +1,4 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
-
-# Intellij idea #
-*.iws
+.idea
 *.iml
-*.ipr
-*/.idea/workspace.xml 
-*/.idea/tasks.xml
+target
+logs
